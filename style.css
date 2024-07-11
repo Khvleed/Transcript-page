@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+  margin-top: 45px;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.student-info, .transcript-table {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  align-items: flex-end;
+}
+
+/* Styling for each section */
+.School-info,
+.student-info {
+  flex: 1;
+  padding: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px; 
+
+}
+
+/* Styling for the heading (h2) */
+.School-info h2,
+.student-info h2, .transcript-heading {
+  font-weight:500; 
+  margin: bottom 8px; 
+  border:solid;
+  border-color: rgb(236, 228, 228);
+  background-color: rgb(37, 139, 202);
+  text-align: center;
+}
+
+/* Styling for the separation line */
+.School-info {
+  border-right: 2px solid #ccc; /* Vertical line to separate sections */
+  margin-right: 10px; /* Add space between sections */
+  padding-right: 10px; /* Add padding to separate content from border */
+}
+
+/* Remove right border from last section */
+.student-info {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.lower-section{
+  border:2px solid;
+  
+
+}
+
+
+  
+
+
+

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Registration</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50em;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: -4px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 3px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+  .Al-Qalam-logo {
+  max-width: 100px;
+  margin-right: 320px;
+  margin-bottom: -15px;
+  text-align: center;
+  font-weight: bold; /* Make the text bold */
+  font-family: Arial, sans-serif; /* Change the font */
+}
+
+
+    .Registration-form input[type="text"],
+    .Registration-form select {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .Registration-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url('arrow.png') no-repeat right center; /* Replace 'arrow.png' with your arrow icon */
+    }
+
+    .submit {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="school-name">
+      <img class="Al-Qalam-logo" src="college.jpg" alt="School Logo"></div>
+      <h1>Al-Qalam University Katsina</h1>
+    <h3>Request for Transcript </h3>
+    <form class="Registration-form" action="registration.php" method="post">
+      <input type="text" placeholder="First Name" name="firstName">
+      <input type="text" placeholder="Surname" name="surname">
+      <input type="text" placeholder="Other Names" name="otherNames">
+      <input type="text" placeholder="Reg No" name="regNo">
+      <input type="text" placeholder="Email Address" name="email">
+      <input type="text" placeholder="Date of Birth (e.g. dd/mm/yyyy)" name="dateOfBirth">
+      <input type="text" placeholder="State of Origin" name="stateOfOrigin">
+      <input type="text" placeholder="Address" name="address">
+      <input type="text" placeholder="Phone Number" name="phoneNumber">
+      <select name="yearOfAdmission">
+        <option value="" disabled selected>Select Year of Admission</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+      <label>Gender:</label>
+      <div>
+        <label>
+          <input type="radio" name="gender" value="male">
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female">
+          Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="other">
+          Other
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="faculty">Select Faculty:</label>
+        <select id="faculty" name="faculty">
+          <option value="arts">Faculty of Arts and Humanities</option>
+          <option value="science">Faculty of Science</option>
+          <option value="education">Faculty of Education</option>
+          <option value="law">Faculty of Law</option>
+          <option value="engineering">Faculty of Engineering</option>
+          <option value="medicine">Faculty of Medicine</option>
+          <option value="islamic_studies">Faculty of Islamic Studies</option>
+          <option value="pharmacy">Faculty of Pharmacy</option>
+          <option value="agriculture">Faculty of Agriculture</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="department">Select Department:</label>
+        <select id="department" name="department">
+        </select>
+      </div>
+
+      <button class="submit" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('faculty').addEventListener('change', function() {
+      var faculty = this.value;
+      var departmentDropdown = document.getElementById('department');
+      departmentDropdown.innerHTML = '';
+
+      if (faculty === 'arts') {
+        var artsDepartments = ['Introduction to Arabic Language', 'Islamic Studies', 'English Language', 'History', 'Geography', 'Mass Communication', 'Arabic Literature', 'English Literature', 'Philosophy', 'Sociology'];
+        artsDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'science') {
+        var scienceDepartments = ['Physics', 'Chemistry', 'Biology', 'Mathematics', 'Computer Science', 'Geology', 'Environmental Science'];
+        scienceDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'education') {
+        var educationDepartments = ['Introduction to Education', 'Curriculum Development', 'Educational Psychology', 'Instructional Design', 'Teaching Methods for Different Subjects', 'Classroom Management', 'Educational Technology', 'Special Needs Education', 'Measurement and Evaluation in Education', 'Islamic Education (if applicable)'];
+        educationDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'law') {
+        var lawDepartments = ['Introduction to Law', 'Constitutional Law', 'Criminal Law', 'Contract Law', 'Islamic Law (if applicable)', 'Business Law', 'Family Law', 'Human Rights Law', 'International Law', 'Legal Research and Writing'];
+        lawDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'engineering') {
+        var engineeringDepartments = ['Introduction to Engineering', 'Engineering Mechanics', 'Thermodynamics', 'Fluid Mechanics', 'Electrical Engineering Fundamentals', 'Electronics Engineering Fundamentals', 'Civil Engineering Materials', 'Mechanical Engineering Design', 'Computer Engineering Fundamentals', 'Engineering Ethics'];
+        engineeringDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'medicine') {
+        var medicineDepartments = ['Human Anatomy', 'Physiology', 'Biochemistry', 'Microbiology', 'Pathology', 'Pharmacology', 'Community Medicine', 'Internal Medicine', 'Surgery', 'Pediatrics (and other medical specialties)'];
+        medicineDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'islamic_studies') {
+        var islamicStudiesDepartments = ['Quranic Studies', 'Hadith Studies', 'Islamic Jurisprudence', 'Islamic Theology', 'Islamic History', 'Arabic Calligraphy', 'Islamic Civilization', 'Comparative Religion', 'Islamic Ethics', 'Dawah (Islamic Propagation)'];
+        islamicStudiesDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'pharmacy') {
+        var pharmacyDepartments = ['Pharmaceutics', 'Pharmacology', 'Medicinal Chemistry', 'Pharmacognosy', 'Clinical Pharmacy', 'Toxicology', 'Public Health Pharmacy', 'Pharmacy Law and Ethics', 'Drug Delivery Systems', 'Pharmaceutical Analysis'];
+        pharmacyDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      } else if (faculty === 'agriculture') {
+        var agricultureDepartments = ['Introduction to Agriculture', 'Soil Science', 'Plant Science', 'Animal Science', 'Agricultural Economics', 'Agricultural Engineering', 'Crop Production', 'Livestock Production', 'Fisheries and Aquaculture', 'Food Science and Technology'];
+        agricultureDepartments.forEach(function(department) {
+          var option = document.createElement('option');
+          option.textContent = department;
+          departmentDropdown.appendChild(option);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

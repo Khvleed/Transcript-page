@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-page {
+      background-image: url('background2.jpg');
+      background-size:cover ;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /*Background overlay*/
+.overlay-container {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  opacity: 0; 
+  transition: 3s ease-in-out; 
+}
+
+ /*Homepage*/
+/* Styles for the text */
+.overlay-text {
+  text-align: center;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  margin-top: 150px;
+}
+
+.overlay-content {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Animation for fade-in effect */
+.overlay-container.fade-in {
+  opacity: 1;
+}
+
+
+/*Login-Section*/
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; 
+  }
+  
+  .icon-close{
+  color: black;
+  }
+
+  .wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 33px;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 1;
+}  
+.wrapper .icon-close:hover {
+    background: #bbd0e2;
+    overflow: hidden;
+    border-radius: 5px;
+    border-top-right-radius: 15px;
+}
+
+
+.wrapper .form-box .loginBtn {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box .loginBtn {
+  transition: transform 1s ease; /* Changed transition duration */
+  transform: translateX(-400px);
+}
+.submit-btn{
+  transition: 1s;
+}
+  .submit-btn:hover{
+    color: #043c61;
+font-weight: bold;   
+font-size: large;
+  }
+
+  .login-section{
+     background: rgb(51, 147, 211);
+     width: 400px;
+     height: 440px;
+     position: relative;
+     border: 2px solid rgba(255,255,255,5);
+     backdrop-filter: blur;
+     border-radius: 20px;
+     box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+      display: flex;
+     justify-content: center;
+     align-items: center;
+     border-color: #252c31;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    color: #fff; 
+    font-size: 16px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #bcc6ce;
+    margin: 30px 0;
+}
+
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 20px;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #000000;  
+    font-size: 16px; 
+    font-weight:600 ;
+    padding: 0;
+ }
+
+ .remember-me {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 9px;
+}
+
+
+.remember-me input[type="checkbox"] {
+    margin-right: 1px; 
+}
+.remember-me label {
+    display: flex;
+    align-items: center;
+    
+}
+.remember-me a.forgot-password {
+    color: #bbd0e2; 
+    text-decoration: none;
+    transition: 0.5s;
+}
+.remember-me a.forgot-password:hover{
+    color: #ffffff;
+}
+
+/*Navigation section*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight:bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #3f3da8;
+}
+
+.loginBtn {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 8px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginBtn:hover {
+    background-color: #fff;
+    color: #162938;
+}
+
+.login-btn {
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 97px; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.loginBtn:hover {
+  background-color: #2980b9; 
+}
+.submit-btn{
+width:100%;
+height: 45px;
+background: #bbd0e2;
+border: none;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1em;
+font-weight: 5000px;
+}
+
+  .login-btn-home {
+    background-color: #3498db; 
+    color: #fff; 
+    width: 300px;
+    padding: 20px; 
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer; 
+    display: block; /* Change to block element to center text */
+    margin: 40px auto; 
+    animation: button-appear 1s ease-in-out forwards;
+    text-align: center; 
+}
+
+/* To center the text vertically in the button */
+.login-btn-home span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+  
+
+/*About*/
+.about-wrapper{
+    min-height: 100vh; 
+    display:flex; 
+    flex-direction: column;
+  }
+  
+
+
+.container {
+  width: 80%;
+  margin: 0 auto; 
+  padding: 2rem 0;
+}
+
+/* About Section */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem; 
+  margin-top: 20px;
+}
+
+.About-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #bbb3b3;
+}
+
+.About-me img {
+  width: 200px;
+  border-radius: 50%; 
+  margin-right: 20px;
+}
+
+.About-me p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.about-img {
+  margin-right: 1.5em; 
+  margin-left: 1em;
+}
+
+.about-img img {
+  width: 200px;
+  border-radius: 50%; 
+  margin-top:-50px;
+
+}
+
+/* Motivation and Offer Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  
+}
+
+.motivation-boxes,
+.offer {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap onto multiple lines */
+  justify-content: space-around; /* Distribute boxes evenly */
+}
+
+.motivation-boxes div,
+.offer div {
+  background-color: #f0f0f0; /* Light gray background for boxes */
+  padding: 1rem;
+  margin: 0.5rem; /* Add some margin between boxes */
+  border-radius: 5px; /* Rounded corners */
+  width: calc(50% - 1rem); 
+  transition: 1.2s;
+}
+.motivation-boxes div:hover,
+.offer div:hover {
+  background-color: #a1d0e6; 
+  cursor:context-menu; 
+  padding: 30px;
+  border-radius: 50px;
+}
+.about-wrapper {
+  background-image: url('about-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*Footer section*/
+.footer {
+  background-color: #777777;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+  margin-left: 180px;
+}
+
+.footer-links h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer-developer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #5f5f5f;
+}
+
+.footer-developer p {
+  color: #fff;
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+

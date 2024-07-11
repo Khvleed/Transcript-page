@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page - University Transcript Management</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>University Transcript Management System - Student Page</h1>
+        <nav>
+            <ul>
+                <li><a href="registration-page.html">Request For Transcript</a></li>
+                <li><a href="transcript.html">View Transcript</a></li>
+                <li><a href="home.html">Logout</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Profile</h2>
+            <form id="update-profile-form">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="text" name="Other Name" placeholder="Other Name" required>
+                <input type="text" name="Phone Number" placeholder="Phone Number" required>
+                <input type="text" name="Address" placeholder="Address" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" placeholder="Reg No" name="regNo">
+                <input type="text" placeholder="Date of Birth (e.g. dd/mm/yyyy)" name="dateOfBirth">
+                <input type="text" placeholder="State of Origin" name="stateOfOrigin">
+          
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="student.js"></script>
+</body>
+</html>

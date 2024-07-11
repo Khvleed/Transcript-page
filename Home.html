@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TranxHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+  </style>
+
+</head>
+<body class="home-page">
+
+    <header>
+      <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Login-page.html" class="login-btn">Login</a>
+
+      </nav>
+    </header>
+
+  
+    <div class="overlay-container" id="overlayContainer">
+      <h3 class="overlay-text"> -->> Your Transcript Journey <<-- <br> -->> Starts Here <<-- </h3>
+      <div class="overlay-content" style="margin-top: 40px; font-family: EB Garamond, serif;">
+      </div>
+      <a href="dashboard.html" class="login-btn-home">Click here to view your transcript</a>
+
+    </div>
+  
+    <script>
+      // Add fade-in animation when the page loads
+      window.onload = function() {
+        var overlayContainer = document.getElementById("overlayContainer");
+        overlayContainer.classList.add("fade-in");
+      };
+    </script>
+  </body>  
+  </html>
+  
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Transcript Home Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="main.css">
+
+<style>
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+	margin-top: 200px;
+}
+
+.container .section {
+    width: 40%;
+    text-align: center;
+	border: solid;
+	background-origin: padding-box;
+    background-color: aliceblue;
+}
+
+.container .section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0%; 
+    margin-bottom: 20px;
+}
+
+.container .section h2 {
+    margin-bottom: 50px;
+}
+
+.container .section a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #8ac5ec;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    transition: 0.5s;
+}
+
+.container .section a:hover {
+    background-color: #8ac5ec;
+    padding: 10px;
+}
+</style>
+<body class="home-page">
+
+    <header>
+      <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+
+      </nav>
+    </header>
+
+	<div class="container">
+        <div class="section">
+            <img src="college.jpg" alt="University Image">
+            <h2>Admin</h2>
+            <a href="Admin-login.html" class="btn">Admin Area</a>
+        </div>
+        <div class="section">
+            <img src="students.jpg" alt="Student Image">
+            <h2>Student</h2>
+            <a href="Login-page.html" class="btn">Student Area</a>
+        </div>
+    </div>
+
+
+
+    
+    <script>
+        // Add fade-in animation when the page loads
+        window.onload = function() {
+          var overlayContainer = document.getElementById("overlayContainer");
+          overlayContainer.classList.add("fade-in");
+        };
+      </script>
+</body>
+</head>
+</html>
+
